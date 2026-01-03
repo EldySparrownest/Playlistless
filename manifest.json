@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Playlistless",
+  "version": "1.0",
+
+  "description": "Adds an option to open a YouTube video that come from a playlist without the rest of the playlist.",
+
+  "icons": {
+    "48": "icons/playlistless-48.png"
+  },
+  
+  "permissions": ["menus", "contextMenus", "tabs"],
+  "background": {
+    "scripts": ["playlistless.js"]
+  },
+  "host_permissions": [
+    "*://*.youtube.com/*"
+  ]
+}
