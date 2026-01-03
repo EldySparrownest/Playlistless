@@ -1,26 +1,51 @@
 browser.contextMenus.create({
   id: "open-no-playlist-same",
   title: "Open without playlist (same tab)",
-  contexts: ["link"]
+  contexts: ["link"],
+  visible: false
 });
 
 browser.contextMenus.create({
   id: "open-no-playlist-new",
   title: "Open without playlist (new tab)",
-  contexts: ["link"]
+  contexts: ["link"],
+  visible: false
+});
+
+browser.menus.onShown.addListener((info, tab) => {
+  //console.log(info);
+  const linkUrl = info.linkUrl || "";
+  let isYouTubeList = false;
+  //console.log(linkUrl);
+
+  try {
+    const url = new URL(linkUrl);
+    if (url.hostname.includes("youtube.com")
+      && !url.pathname.includes("redirect")
+      && !url.pathname.includes("playlist")
+      && url.searchParams.has("list")) {
+      isYouTubeList = true;
+    }
+  } catch (e) {
+    // not a valid URL — skipping
+  }
+
+  browser.menus.update("open-no-playlist-same", {
+    visible: isYouTubeList
+  });
+  browser.menus.update("open-no-playlist-new", {
+    visible: isYouTubeList
+  });
+
+  // applying the changes
+  browser.menus.refresh();
 });
 
 // strips YouTube playlist parameters
 function stripPlaylistParams(urlString) {
   try {
-    //console.log(urlString);
     let url = new URL(urlString);
-/*     url.searchParams.forEach((val, key, parent) => {
-        console.log(val);
-        console.log(key);
-        console.table(parent);
-    }); */
-    // if link leads to a YouTube video with a playlist parameter
+    // if url leads to a YouTube video with a playlist parameter
     if (
         url.hostname.includes("youtube.com")
         && url.searchParams.has("list")
@@ -39,10 +64,7 @@ function stripPlaylistParams(urlString) {
 
 // respond to clicks on context menu items
 browser.contextMenus.onClicked.addListener((info, tab) => {
-    //console.log("I am in onClicked");
-    //console.log(info.linkUrl);
   const cleaned = stripPlaylistParams(info.linkUrl);
-    //console.log(cleaned);
   if (!cleaned) {
     // not a playlist link; do nothing
     return;
