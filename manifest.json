@@ -6,7 +6,8 @@
   "description": "Adds an option to open a YouTube video that come from a playlist without the rest of the playlist.",
 
   "icons": {
-    "48": "icons/playlistless-48.png"
+    "48": "icons/playlistless-48.png",
+    "96": "icons/playlistless-96.png"
   },
   
   "permissions": ["menus", "contextMenus", "tabs"],
