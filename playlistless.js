@@ -1,20 +1,20 @@
 browser.contextMenus.create({
   id: "open-no-playlist-same",
-  title: "Open without playlist (same tab)",
+  title: browser.i18n.getMessage("optionSameTab"),
   contexts: ["link"],
   visible: false
 });
 
 browser.contextMenus.create({
   id: "open-no-playlist-new",
-  title: "Open without playlist (new tab)",
+  title: browser.i18n.getMessage("optionNewTab"),
   contexts: ["link"],
   visible: false
 });
 
 browser.contextMenus.create({
   id: "copy-stripped-link",
-  title: "Copy pure video link (no params)",
+  title: browser.i18n.getMessage("optionCopyPureLink"),
   contexts: ["link"],
   visible: false
 });

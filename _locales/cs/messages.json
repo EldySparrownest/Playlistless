@@ -1,0 +1,22 @@
+{
+  "extensionName": {
+    "message": "Playlistless - přehrát bez seznamu",
+    "description": "Name shown in the Add-ons Manager"
+  },
+  "extensionDescription": {
+    "message": "Přidává volby k samostatnému otevření YouTube videa původně pocházejícího ze seznamu (na aktuální nebo nové záložce) a ke zkopírování odkazu na video bez dalších parametrů.",
+    "description": "Description shown in the Add-ons Manager"
+  },
+  "optionSameTab": {
+    "message": "Otevřít bez seznamu (tato záložka)",
+    "description": "Label of option to open video in the same tab"
+  },
+  "optionNewTab": {
+    "message": "Otevřít bez seznamu (nová záložka)",
+    "description": "Label of option to open video in a new tab"
+  },
+  "optionCopyPureLink": {
+    "message": "Kopírovat čistý odkaz videa (bez parametrů)",
+    "description": "Label of option to copy pure link to the video"
+  }
+}

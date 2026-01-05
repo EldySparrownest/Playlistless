@@ -1,0 +1,22 @@
+{
+  "extensionName": {
+    "message": "Playlistless",
+    "description": "Name shown in the Add-ons Manager"
+  },
+  "extensionDescription": {
+    "message": "Adds options to open a YouTube video that comes from a playlist without the rest of the playlist (in the same tab or in a new tab) as well as to copy its link stripped of other parameters.",
+    "description": "Description shown in the Add-ons Manager"
+  },
+  "optionSameTab": {
+    "message": "Open without playlist (same tab)",
+    "description": "Label of option to open video in the same tab"
+  },
+  "optionNewTab": {
+    "message": "Open without playlist (new tab)",
+    "description": "Label of option to open video in a new tab"
+  },
+  "optionCopyPureLink": {
+    "message": "Copy pure video link (no params)",
+    "description": "Label of option to copy pure link to the video"
+  }
+}

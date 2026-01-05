@@ -1,9 +1,10 @@
 {
   "manifest_version": 3,
-  "name": "Playlistless",
+  "name": "__MSG_extensionName__",
   "version": "1.0",
 
-  "description": "Adds options to open a YouTube video that comes from a playlist without the rest of the playlist (in the same tab or in a new tab) as well as to copy its link stripped of other parameters.",
+  "description": "__MSG_extensionDescription__",
+  "default_locale": "en",
 
   "icons": {
     "48": "icons/playlistless-48.png",
