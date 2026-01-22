@@ -5,7 +5,9 @@ Playlistless is a browser extension for Firefox with 3 simple features usable on
 - open video without playlist in a new tab
 - copy a pure link to the video (without the playlist or any other parameters)
 
-It is not available in Mozilla add-ons _yet_.
+# Download
+
+**Available from Mozilla add-ons [HERE](https://addons.mozilla.org/en-US/firefox/addon/playlistless/).**
 
 ## Languages
 
